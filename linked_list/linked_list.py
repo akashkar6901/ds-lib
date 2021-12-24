@@ -12,7 +12,7 @@ class LinkedList:
     else:
       current = self.head
       
-      #FOR FINDING THE LAST NODE OF THE LINKEDLIST.
+      #For finding the last node of the linkedlist.
       while(current.next):
         current = current.next
       current.next = new_node
@@ -20,7 +20,7 @@ class LinkedList:
   def iterate(self):
     current = self.head
     
-    while (current):
+    while(current):
       print(current.value, end="->")
       current = current.next
 
@@ -35,7 +35,7 @@ class LinkedList:
         current = current.next
       else:
         return ("INDEX OUT OF RANGE.")
-        
+
     new_node.next = current.next
     current.next = new_node
   
@@ -60,6 +60,7 @@ class LinkedList:
     if(self.head == None):
       return False
     else:
+
       fast = self.head.next
       slow = self.head
 
