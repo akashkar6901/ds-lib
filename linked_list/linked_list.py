@@ -1,7 +1,4 @@
-class Node:
-   def __init__(self, value, next = None) -> None:
-    self.value = value
-    self.next = next
+from Node import *
 
 class LinkedList:
   def __init__(self) -> None:
@@ -15,6 +12,7 @@ class LinkedList:
     else:
       current = self.head
       
+      #FOR FINDING THE LAST NODE OF THE LINKEDLIST.
       while(current.next):
         current = current.next
       current.next = new_node
@@ -22,9 +20,10 @@ class LinkedList:
   def iterate(self):
     current = self.head
     
-    while(current):
+    while (current):
       print(current.value, end="->")
       current = current.next
+
     print("")
 
   def insertAt(self,value,index):
@@ -32,13 +31,17 @@ class LinkedList:
     new_node = Node(value)
 
     for i in range(index-1):
-      current = current.next
-
+      if(current.next):
+        current = current.next
+      else:
+        return ("INDEX OUT OF RANGE.")
+        
     new_node.next = current.next
     current.next = new_node
   
   def delete(self,index):
     current = self.head
+
     for i in range(index-1):
       current = current.next
 
@@ -49,18 +52,20 @@ class LinkedList:
     slow=self.head
 
     while(fast and fast.next):
-      slow=slow.next
-      fast=fast.next.next
+      slow = slow.next
+      fast = fast.next.next
     return slow.value
   
   def isCyclic(self):
-    fast=self.head.next
-    slow=self.head
+    if(self.head == None):
+      return False
+    else:
+      fast = self.head.next
+      slow = self.head
 
-    while(fast and fast.next):
-      if(slow == fast):
-        return True
-      fast = fast.next.next
-      slow = slow.next
-    return False
-  
+      while (fast and fast.next):
+        if(slow == fast):
+          return True
+        fast = fast.next.next
+        slow = slow.next
+      return False
