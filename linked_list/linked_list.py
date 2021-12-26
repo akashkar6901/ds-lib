@@ -34,7 +34,7 @@ class LinkedList:
       if(current.next):
         current = current.next
       else:
-        return ("INDEX OUT OF RANGE.")
+        return ("INDEX OUT OF RANGE")
 
     new_node.next = current.next
     current.next = new_node
