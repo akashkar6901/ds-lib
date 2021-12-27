@@ -19,7 +19,7 @@ class Stack:
     def pop(self):
          
         if (self.top == None):
-            return None
+            raise Exception("underflow")
              
         else:
             current = self.top
@@ -27,6 +27,6 @@ class Stack:
             return current.data
     def peek(self):
         if self.top == None:
-            return None
+            raise Exception("empty stack")
         else:
             return self.top.data
