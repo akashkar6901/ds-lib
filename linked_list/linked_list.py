@@ -17,7 +17,7 @@ class LinkedList:
         current = current.next
       current.next = new_node
     
-  def iterate(self):
+  def traverse(self):
     current = self.head
     
     while(current):
@@ -26,25 +26,27 @@ class LinkedList:
 
     print("")
 
-  def insertAt(self,value,index):
-    current=self.head
+  def insert_at(self, value, index):
+    current = self.head
     new_node = Node(value)
+
+    for i in range (index-1):
+      if(current.next):
+        current = current.next
+      else:
+        raise Exception ("Index out of range")
+
+    new_node.next = current.next
+    current.next = new_node
+  
+  def delete(self, index):
+    current = self.head
 
     for i in range(index-1):
       if(current.next):
         current = current.next
       else:
-        return ("INDEX OUT OF RANGE.")
-
-    new_node.next = current.next
-    current.next = new_node
-  
-  def delete(self,index):
-    current = self.head
-
-    for i in range(index-1):
-      current = current.next
-
+        raise Exception ("index out of range")
     current.next = current.next.next
 
   def middle(self):
@@ -56,7 +58,7 @@ class LinkedList:
       fast = fast.next.next
     return slow.value
   
-  def isCyclic(self):
+  def is_cyclic(self):
     if(self.head == None):
       return False
     else:
