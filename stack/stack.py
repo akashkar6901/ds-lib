@@ -12,19 +12,18 @@ class Stack:
          
         if self.top == None:
             self.top = new_node
-             
         else:
             new_node.next = self.top
             self.top = new_node
+
     def pop(self):
-         
         if (self.top == None):
             raise Exception("underflow")
-             
         else:
             current = self.top
             self.top = self.top.next
             return current.data
+
     def peek(self):
         if self.top == None:
             raise Exception("empty stack")
