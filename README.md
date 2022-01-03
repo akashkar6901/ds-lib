@@ -1,6 +1,6 @@
-# ds-lib
+# DS-LIBRARY
 - A Data Structure Library which consist of multiple common DS and there implementation
-## LinkeList
+## LinkedList
     ### methods:
         - append(value)  : pass the value to be inserted at end of LinkedList
         - iterate() : Loops over the linked list
@@ -22,3 +22,4 @@ l1.isCycle // False
 
 
 ```
+## STACK
