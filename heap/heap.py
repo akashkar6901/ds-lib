@@ -8,6 +8,7 @@ class MaxHeap:
 
     while(current > 1):
       parent=current//2
+
       if(self.heap[parent] < self.heap[current]):
         self.heap[parent] , self.heap[current] = self.heap[current] , self.heap[parent]
         current = parent
@@ -59,11 +60,8 @@ class MaxHeap:
     self.shiftDown(self.heap, 1)
     return popped 
 
+  @classmethod
   def heapify(cls, arr):
-
     for i in range((len(arr)//2) - 1, -1, -1):
       cls.shiftDown(arr, i)
-    return arr 
-  
-  
-    
+    return arr                                           
