@@ -23,3 +23,5 @@ l1.isCycle // False
 
 ```
 ## STACK
+    ### methods:
+        -
