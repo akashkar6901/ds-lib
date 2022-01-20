@@ -31,8 +31,12 @@
         - insert(value) : pass the value to be inserted in heap
         - delete() : deletes the head of the heap
         - heapify(array) : pass the array and it will return the heapified array.
-### SORTING
+## SORTING
     BUBBLE SORT :
         We will pass an array and it will returns the sorted array using Bubble Sort method.
+        
+        example: 
+            ENTER THE ARRAY: 4 2 7 -1 9 10 34
+            OUTPUT : 34 10 9 7 4 2 -1
         
     
