@@ -23,3 +23,16 @@ l1.isCycle // False
 
 ```
 ## STACK
+    ### methods:
+        - push(value) : pass the value to be inserted in stack
+        - pop() : deletes the last element inserted in the stack
+        - peek() : returns the top element
+## HEAP
+    ### methods :
+        - insert(value) : pass the value to be inserted in heap
+        - delete() : deletes the head of the heap
+        - heapify(array) : pass the array and it will return the heapified array.
+## SORTING
+    BUBBLE SORT :
+        We will pass an array and it will returns the sorted array using Bubble Sort method.
+        

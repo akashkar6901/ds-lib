@@ -14,4 +14,3 @@ def selection_sort(arr):
         start = i
         min_index = get_min_index(arr, start)
         arr[min_index], arr[i] = arr[i], arr[min_index]
-
