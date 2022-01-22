@@ -9,19 +9,18 @@
         - reverse() : reverse the linkedlist
         - isCyclic() : checks whether there is a cycle or not
 
-example:
-```
-l1 = LinkedList()
-l1.append(1)
-l1.append('xyz')
-l1.append(True)
-l1.traverse() // -> 1->xyz->True
-l1.reverse() // _> True->xyz->1
-l1.middle() // -> xyz
-l1.isCycle // False
+    example:
+        ```
+    l1 = LinkedList()
+    l1.append(1)
+    l1.append('xyz')
+    l1.append(True)
+    l1.traverse() // -> 1->xyz->True
+    l1.reverse() // _> True->xyz->1
+    l1.middle() // -> xyz
+    l1.isCycle // False
 
-
-```
+    ```
 ## STACK
     ### methods:
         - push(value) : pass the value to be inserted in stack
@@ -36,3 +35,8 @@ l1.isCycle // False
     BUBBLE SORT :
         We will pass an array and it will returns the sorted array using Bubble Sort method.
         
+        example: 
+            ENTER THE ARRAY: 4 2 7 -1 9 10 34
+            OUTPUT : 34 10 9 7 4 2 -1
+        
+    
